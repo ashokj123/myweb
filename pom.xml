@@ -7,7 +7,11 @@
 	<version>0.7.0-SNAPSHOT</version>
 	<name>myweb Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	<!-- This is comment in XML-->
+	<properties>
+      <!-- SONAR SERVER ON A REMOTE HOST -->
+      <sonar.host.url>http://18.221.65.56:9000</sonar.host.url>
+        </properties>
+      <!-- This is comment in XML-->
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -45,12 +49,12 @@
 		<repository>
 			<id>nexus</id>
 			<name>Releases</name>
-			<url>http://192.168.70.1:32768/repository/maven-releases/</url>
+			<url>http://13.59.18.208:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus</id>
 			<name>Snapshot</name>
-			<url>http://192.168.70.1:32768/repository/maven-snapshots/</url>
+			<url>http://13.59.18.208:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
   	</distributionManagement>
 	<build>
